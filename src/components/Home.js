@@ -1,10 +1,16 @@
 import React, { useEffect } from "react";
+import UserList from "./UserList";
 import { userAPI } from "../api";
 import useAPICall from "../hooks/useAPICall";
 
 const Home = (props) => {
   //  Component hooks
-  const { response: users, error, clearData, callAPI } = useAPICall({
+  const {
+    response: users,
+    error,
+    clearData,
+    callAPI,
+  } = useAPICall({
     queryFunction: userAPI.getUsers,
   });
 
@@ -31,7 +37,13 @@ const Home = (props) => {
   }, [error]);
 
   //    Rendering
-  return <h1>HOME</h1>;
+  return (
+    <div className="home">
+      <div className="home-title">Top 5 Gihub Users</div>
+      <div className="home-info">Tap the username to see more information</div>
+      <UserList users={users || []} />
+    </div>
+  );
 };
 
 export default Home;
