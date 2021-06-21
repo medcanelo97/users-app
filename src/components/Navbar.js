@@ -11,7 +11,7 @@ const Navbar = (props) => {
 
     return (
         <div className="navbar">
-            {location.pathname === '/user' && <div onClick={() => onBackClicked()}>Back</div>}
+            {location.pathname === '/user' && <div className="back" onClick={() => onBackClicked()}>Back</div>}
             <div className="page">
                 Home
             </div>

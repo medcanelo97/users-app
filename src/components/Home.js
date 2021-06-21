@@ -39,7 +39,7 @@ const Home = (props) => {
   //    Rendering
   return (
     <div className="home">
-      <div className="home-title">Top 5 Gihub Users</div>
+      <h2 className="home-title">Top 5 Gihub Users</h2>
       <div className="home-info">Tap the username to see more information</div>
       <UserList users={users || []} />
     </div>

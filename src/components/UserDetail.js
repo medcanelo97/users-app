@@ -39,7 +39,7 @@ const UserDetail = (props) => {
     <div className="user-detail">
       <img className="user-avatar" src={response.avatar_url} />
       <div className="user-info">
-        <div className="user-name">{response.login}</div>
+        <h3 className="user-name">{response.login}</h3>
         <div className="user-location">{response.location}</div>
       </div>
     </div>
